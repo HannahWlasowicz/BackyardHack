@@ -5,6 +5,19 @@ import routes from './routes'
 
 Vue.use(VueRouter)
 
+import VueGeolocation from 'vue-browser-geolocation'
+Vue.use(VueGeolocation)
+
+import * as VueGoogleMaps from 'vue2-google-maps'
+Vue.use(VueGoogleMaps, {
+  options: {
+    load: {
+      key: 'AIzaSyCOeMNd4B1Xs3ZcThi-WnTG4VtBX7shwG0'
+    },
+    installComponents: false
+  }
+})
+
 /*
  * If not building with SSR mode, you can
  * directly export the Router instantiation;
